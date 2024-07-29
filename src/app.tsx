@@ -10,7 +10,7 @@ export const App = () => {
             <div className="bg-blue-50 flex-1 p-4">
                 <MarkdownInput value={markdown} onChange={setMarkdown} />
             </div>
-            <div className="flex-1 p-4 lg:max-h-[100vh] overflow-auto">
+            <div className="flex-1 p-4">
                 <MarkdownPreview markdown={markdown || "No markdown"} />
             </div>
         </div>

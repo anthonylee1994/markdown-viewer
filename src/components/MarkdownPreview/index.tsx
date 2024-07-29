@@ -14,7 +14,7 @@ interface Props {
 
 export const MarkdownPreview = ({markdown}: Props) => {
     return (
-        <div className="g-markdown-preview bg-gray-200 p-4 rounded-lg overflow-auto">
+        <div className="g-markdown-preview bg-gray-200 p-4 rounded-lg">
             <ReactMarkdown
                 rehypePlugins={[rehypeRaw]}
                 remarkPlugins={[remarkGfm, remarkMath]}
