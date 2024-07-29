@@ -2,11 +2,11 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
-import remarkMath from "remark-math";
 import {dracula} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Latex from "react-latex";
 import "katex/dist/katex.min.css";
 import "./index.less";
+import remarkMath from "remark-math";
 
 interface Props {
     markdown: string;
@@ -16,8 +16,8 @@ export const MarkdownPreview = ({markdown}: Props) => {
     return (
         <div className="g-markdown-preview bg-gray-200 p-4 rounded-lg overflow-auto">
             <ReactMarkdown
-                rehypePlugins={[rehypeRaw, remarkMath]}
-                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                remarkPlugins={[remarkGfm, remarkMath]}
                 components={{
                     code({className, children, ...props}) {
                         const match = /language-(\w+)/.exec(className || "");
