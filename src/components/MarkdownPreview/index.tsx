@@ -20,6 +20,8 @@ export const MarkdownPreview = ({markdown}: Props) => {
                         const match = /language-(\w+)/.exec(className || "");
 
                         return match ? (
+                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-expect-error
                             <SyntaxHighlighter style={dracula} PreTag="div" language={match[1]} {...props}>
                                 {String(children).replace(/\n$/, "")}
                             </SyntaxHighlighter>
