@@ -4,9 +4,9 @@ import rehypeRaw from "rehype-raw";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import {dracula} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Latex from "react-latex";
+import remarkMath from "remark-math";
 import "katex/dist/katex.min.css";
 import "./index.less";
-import remarkMath from "remark-math";
 
 interface Props {
     markdown: string;
